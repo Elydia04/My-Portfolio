@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+/* Class-based dark mode, toggled from the nav */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-zinc-50 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
+  }
+
+  ::selection {
+    @apply bg-emerald-700 text-white dark:bg-emerald-400 dark:text-zinc-950;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Print / Save as PDF: show only the resume section as a clean CV.
+   Forced opacity/transform resets cover scroll-reveal animations that
+   have not fired yet for off-screen content. */
+@media print {
+  * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  header,
+  footer,
+  main > section:not(#resume) {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #18181b !important;
+  }
+
+  #resume {
+    border: none !important;
+  }
+
+  #resume .mx-auto {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Dark mode must not leak into the printed page */
+  #resume * {
+    background-color: transparent !important;
+    color: #18181b !important;
+    border-color: #d4d4d8 !important;
+  }
+}
