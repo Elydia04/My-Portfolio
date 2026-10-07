@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <section id="home">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-16 pb-20 md:grid-cols-[1.05fr_1fr] md:gap-14 md:px-6 md:pt-24 md:pb-28">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-16 pb-14 md:grid-cols-[1.05fr_1fr] md:gap-14 md:px-6 md:pt-24 md:pb-20">
         <div>
           <motion.p
             {...rise(0)}

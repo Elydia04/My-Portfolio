@@ -12,7 +12,7 @@ const cellClass = 'rounded-xl border border-zinc-200 bg-white p-6 dark:border-zi
 export default function About() {
   return (
     <section id="about" className="border-t border-zinc-200 dark:border-zinc-800">
-      <div className="mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 pt-12 pb-20 md:px-6 md:pt-14 md:pb-24">
         <Reveal>
           <h2 className="text-3xl font-medium tracking-tight md:text-4xl">About me</h2>
         </Reveal>
@@ -21,11 +21,21 @@ export default function About() {
           <Reveal className={`${cellClass} md:col-span-4`} delay={0.05}>
             <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
               I&apos;m a third-year Information Technology student at Cavite State University, Tanza
-              Campus.
+              Campus. Right now I&apos;m splitting my energy between two goals: becoming a
+              full-stack developer and working with data as an analyst.
             </p>
             <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              I&apos;m working toward two goals: full-stack development and data analysis. Classwork
-              gives me the fundamentals, and personal projects put them to work.
+              Most of what I know came from building rather than reading. Coursework gave me the
+              fundamentals: programming logic, databases, and the languages behind them. Personal
+              projects are where those lessons stick, because a project breaks in ways a
+              classroom never does.
+            </p>
+            <p className="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+              Five projects are live so far, from a Three.js first-person shooter to a resort
+              website, each one deployed and reachable by anyone with the link. Every one of them
+              taught me something new about React, TypeScript, or the work around the code, like
+              setting up a build or fixing something after launch. I&apos;m still growing the stack
+              and I plan to keep it that way.
             </p>
           </Reveal>
 
@@ -36,7 +46,7 @@ export default function About() {
               loading="lazy"
               width="720"
               height="720"
-              className="aspect-square w-full rounded-xl border border-zinc-200 object-cover dark:border-zinc-800"
+              className="h-full w-full rounded-xl border border-zinc-200 object-cover dark:border-zinc-800"
             />
           </Reveal>
 
@@ -63,8 +73,8 @@ export default function About() {
           <Reveal className={`${cellClass} md:col-span-3`} delay={0.2}>
             <h3 className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Right now</h3>
             <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              Growing the stack: Next.js and Tailwind on the front end, Python and MySQL for data
-              work, Linux for everything around it.
+              Next.js and Tailwind on the front end, Python and MySQL for data work, Linux for
+              everything around it. This site is part of that practice too.
             </p>
           </Reveal>
         </div>
