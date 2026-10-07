@@ -41,7 +41,7 @@ export default function About() {
           </Reveal>
 
           <Reveal
-            className="rounded-xl border border-emerald-200/70 bg-gradient-to-br from-emerald-50 to-zinc-100 p-6 md:col-span-3 dark:border-emerald-900/60 dark:from-emerald-950/50 dark:to-zinc-900"
+            className="rounded-xl border border-emerald-200/70 bg-linear-to-br from-emerald-50 to-zinc-100 p-6 md:col-span-3 dark:border-emerald-900/60 dark:from-emerald-950/50 dark:to-zinc-900"
             delay={0.15}
           >
             <h3 className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
